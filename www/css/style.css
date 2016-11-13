@@ -1,0 +1,437 @@
+﻿@charset "utf-8"; /*для отображения русских символов*/
+
+* { /*абсолютно ко всему документу*/
+    margin: 0px; /*отступы будем указывать сами*/
+    padding: 0px;
+    outline: none; /*чтоб на форме не было подсвечиваний при наведении*/
+}
+
+html {
+    height: 100%;
+}
+/*наш док-т html будет высотой 100%*/
+
+body {
+    width: 100%; /*ширина и высота тела будет на полный экран*/
+    height: 100%;
+    min-width: 340px;
+    min-height: 180px;
+    float: left;
+    /*background-image: url(/img/background1.jpg);*/
+    background-color: #DEB887;
+    color: darkred;
+    font-family: "Segoe UI", Comic, sans-serif;
+    font-size: 1.2vw;
+    line-height: 135%; /*высота между строчек*/
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+/*сразу добавим ко ВСЕМ ссылкам цвет*/
+a {
+    color: #8B4513;
+    text-decoration: none; /*подчеркивания ссылки не будет!!!*/
+}
+
+    a:hover {
+        color: #F4A460; /*эффект ссылки при наведении на нее*/
+    }
+
+    a, a:hover {
+        font-weight: bold;
+        -webkit-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Safari*/
+        -moz-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Mozilla*/
+        -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
+        transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
+    }
+ul li{
+    list-style-type: none;
+}
+.clear {
+    clear: both; /*этот класс будет отделять одну часть сайта от другой - будет делать пустую строку*/
+}
+
+/*стили для ШАПКИ*/
+header {
+    width: 98%; /*ширина всегда должна быть 100% (с учетом margin/padding), тогда ничего не будет вылазить за экран*/
+    height: 30%;
+    float: left;
+    padding: 1%;
+    background-image: url(../img/header00.jpg);
+    /*background-repeat: repeat-x;*/
+    background-color: #a52a2a;
+    color: #FFF5EE;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a52a2a;
+}
+
+    header div#logo {
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+        /* background: url(img/header00.jpg) no-repeat center bottom;*/
+    }
+
+    header div#menuHead {
+        position: relative;
+        border: 1px solid #deb887;
+        border-radius: 4px;
+        color: #FFF5EE;
+        font-size: 1em;
+        margin-bottom: 5px;
+        margin-right: 12%;
+        margin-top: 8%;
+        padding: 0.7%;
+        float: right;
+    }
+
+        header div#menuHead a, footer div#menuFooter a {
+            color: #FFF5EE;
+        }
+
+            header div#menuHead a:hover, footer div#menuFooter a:hover {
+                color: #a52a2a;
+                -webkit-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Safari*/
+                -moz-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Mozilla*/
+                -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
+                transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
+            }
+
+        header div#menuHead:hover, footer div#menuFooter:hover {
+            background-color: #deb887;
+            color: #a52a2a;
+            -webkit-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Safari*/
+            -moz-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Mozilla*/
+            -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
+            transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
+        }
+
+/*Стили для основной части wrapper*/
+#wrapper {
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+}
+
+    /*Стили для леевой колонки*/
+    #wrapper #leftCol {
+        width: 70%;
+        margin-right: 10%;
+        float: left;
+    }
+
+        #wrapper #leftCol #bigArticle {
+            width: 78%;
+            margin-left: 10%;
+            float: left;
+            background-color: #FFF5EE;
+            background-image: url(../img/background1.jpg);
+            padding: 1%;
+        }
+
+            #wrapper #leftCol #bigArticle img, #wrapper #leftCol .article img {
+                width: 100%;
+                float: left;
+                margin-bottom: 10px;
+            }
+
+            #wrapper #leftCol #bigArticle h3, #wrapper #leftCol .article h3 {
+                font-weight: normal;
+                font-size: 1.3em;
+                color: darkred;
+                font-family: Comic Sans MS, sans-serif;
+                text-align: center;
+            }
+
+            #wrapper #leftCol #bigArticle p, #wrapper #leftCol .article p {
+                font-size: 0.9em;
+                width: 90%;
+                margin-left: 5%;
+            }
+
+            #wrapper #leftCol #bigArticle div.more {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: darkred;
+                color: #FFF5EE;
+                width: 10%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+                #wrapper #leftCol #bigArticle div.more a, #wrapper #leftCol .article div.more a {
+                    color: #FFF5EE;
+                }
+
+                    #wrapper #leftCol #bigArticle div.more a:hover, #wrapper #leftCol .article div.more a:hover {
+                        color: #a52a2a;
+                    }
+
+                #wrapper #leftCol #bigArticle div.more:hover, #wrapper #leftCol .article div.more:hover {
+                    background-color: #deb887;
+                    color: #a52a2a;
+                    -webkit-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Safari*/
+                    -moz-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Mozilla*/
+                    -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
+                    transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
+                }
+        /*Стили для маленьких статей*/
+        #wrapper #leftCol .article {
+            width: 40%;
+            margin-left: 5%;
+            float: left;
+            background-color: #FFF5EE;
+            background-image: url(../img/background1.jpg);
+            padding: 1%;
+        }
+
+            #wrapper #leftCol .article div.more {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: darkred;
+                color: #FFF5EE;
+                width: 20%;
+                text-align: center;
+                margin-top: 10px;
+            }
+    /*Стили для правой колонки*/
+    #wrapper #rightCol {
+        position: relative;
+        width: 20%;
+        height: auto;
+        float: left;
+    }
+
+        #wrapper #rightCol .menuRight{
+            position: relative;
+            width: 100%;
+            height: auto;
+            float: left;
+            margin-bottom: 20px;
+            padding: 5px;
+            border: 2px solid #a52a2a;
+            background-color: #a52a2a;
+            background-image: url(../img/coffeeMap1.jpg);
+        }
+
+        #wrapper #rightCol .menuSidebar{
+            /*position: relative;*/
+            width: 100%;
+            height: 30px;
+            float: left;
+            color: #FFF5EE;
+        }
+#wrapper #rightCol .menuSidebar:hover {
+    border: 1px solid #deb887;
+    border-radius: 5px;
+    background-color: #deb887;
+    color: #a52a2a;
+    -webkit-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Safari*/
+    -moz-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Mozilla*/
+    -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
+    transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
+}
+div#rightListArticlesDiv a{color: white;}
+
+div#rightListArticlesDiv ul#rightListArticlesUL{
+    float: none;
+    position: absolute;
+    display: none;
+    width: 95%;
+    top: 157px;/*125px;*/
+    left: 6px; /*-213px;*/
+    color: white;
+     border: 1px solid #a52a2a;
+    border-radius: 4px;
+    background-color: #deb887;
+
+}
+div#rightListArticlesDiv ul#rightListArticlesUL li{
+    position: relative;
+    padding: 5px;
+    border-bottom: 1px solid #a52a2a;
+
+}
+div#rightListArticlesDiv ul#rightListArticlesUL li:last-child{
+    border-bottom: none;
+}
+div#rightListArticlesDiv ul#rightListArticlesUL li a{
+    width: 95%;
+    height: auto;
+    font-size: 0.8em;
+    line-height: 1em;
+    color: #a52a2a;
+}
+div#rightListArticlesDiv ul#rightListArticlesUL li:hover{
+    background-color: #a52a2a;
+    color: #deb887;
+}
+div#rightListArticlesDiv ul#rightListArticlesUL li a:hover{
+    color: #deb887;
+}
+
+        #wrapper #rightCol .banner {
+
+            width: 100%;
+            float: left;
+            margin-bottom: 20px;
+            border: 2px solid #a52a2a;
+        }
+    /*Стили для странички aboutUs*/
+    #wrapper #leftCol #aboutUs {
+        width: 76%;
+        margin-left: 10%;
+        border: 1px solid #a52a2a;
+        padding: 2%;
+        background-image: url(../img/background1.jpg);
+    }
+    /*Стили для странички contacts*/
+
+    #wrapper #leftCol #contacts {
+        width: 76%;
+        height: auto;
+        margin-left: 10%;
+        border: 1px solid #a52a2a;
+        padding: 2%;
+        background-image: url(../img/background1.jpg);
+    }
+
+    #wrapper #leftCol #feedback {
+        width: 76%;
+        height: 500px;
+        margin-left: 10%;
+        border: 1px solid #a52a2a;
+        padding: 2%;
+        background-image: url(../img/background1.jpg);
+    }
+
+        #wrapper #leftCol #contacts h3, #wrapper #leftCol #feedback h3 {
+            font-weight: normal;
+            font-size: 1.3em;
+            color: darkred;
+            font-family: Comic Sans MS, sans-serif;
+            text-align: center;
+        }
+
+    #wrapper #leftCol #contacts p {
+        font-size: 1em;
+        margin-top: 5px;
+    }
+
+        #wrapper #leftCol #contacts p span {
+            font-style: normal;
+            font-weight: bold;
+        }
+
+    #wrapper #leftCol #contacts img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #wrapper #leftCol #feedback input {
+        width: 40%;
+        margin-left: 30%;
+        float: left;
+        border-radius: 5px;
+        border: 2px solid darkred;
+        padding: 5px;
+        color: darkred;
+        margin-bottom: 20px;
+        font-size: 1em;
+    }
+
+        #wrapper #leftCol #feedback input:focus, #wrapper #leftCol #feedback textarea:focus {
+            border: 2px solid green;
+        }
+
+        #wrapper #leftCol #feedback input#done:hover {
+            background-color: green;
+            cursor: pointer;
+        }
+
+    #wrapper #leftCol #feedback textarea {
+        width: 50%;
+        margin-left: 25%;
+        float: left;
+        border-radius: 5px;
+        border: 2px solid darkred;
+        padding: 5px;
+        color: darkred;
+        margin-bottom: 20px;
+        font-size: 1em;
+        resize: none;
+        height: 150px;
+    }
+    #wrapper #leftCol #feedback #msgShow {
+        font-size: 1em;
+        font-weight: bold;
+        color: red;
+        float: left;
+        text-align: center;
+        width: 100%;
+
+    }
+/*Стили для footer*/
+footer {
+    width: 98%;
+    height: 20%;
+    float: left;
+    padding: 1%;
+    background-image: url(../img/header00.jpg);
+    background-color: #a52a2a;
+    border-top: 2px solid #a52a2a;
+    margin-top: 10px;
+    color: #FFF5EE;
+}
+
+    footer div#menuFooter {
+        border: 1px solid #deb887;
+        border-radius: 4px;
+        color: #FFF5EE;
+        font-size: 1em;
+        margin-bottom: 5px;
+        margin-right: 12%;
+        /*margin-top: 8%;*/
+        padding: 0.7%;
+        float: right;
+    }
+
+    footer #social {
+        float: left;
+        width: 50%;
+        /*margin-top: 6%;*/
+    }
+
+        footer #social img {
+            border: 1px solid silver;
+            border-radius: 5px;
+            background-color: #FFF5EE;
+            float: left;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            margin-top: 6%;
+        }
+
+            footer #social img:hover {
+                background-color: #d2691e;
+                border: 1px solid #d2691e;
+                border-radius: 5px;
+                -webkit-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Safari*/
+                -moz-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Mozilla*/
+                -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
+                transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
+            }
+
+    footer #rights {
+        float: right;
+        width: 50%;
+        text-align: right;
+        font-size: 1.1em;
+        /*margin-right: 1%;*/
+        margin-top: 3%;
+    }
