@@ -4,26 +4,21 @@
 $(document).ready(function () {
 
     $("div#rightListArticlesDiv").mouseover(function (event) {
-       $("ul#rightListArticlesUL:first").slideDown(1500);
+       $("ul#rightListArticlesUL:first").slideDown(800);
 
     });
     $("div#rightListArticlesDiv").mouseleave(function () {
         $("ul#rightListArticlesUL:first").slideUp(1000);
 
     });
-   /* $(".liClassMenu").click(function (event) {
-      var currentArticle = $(this).attr('id');
-        alert(currentArticle);
-    })
-
-        $.post(
-            "../block/rightBlock.php",
-            { 'title':currentArticle },
-
-            function (str) {
-
-            });*/
+    $("div#rightListReceptiesDiv").mouseover(function (event) {
+        $("ul#rightListReceptiesUL:first").slideDown(800);
 
     });
+    $("div#rightListReceptiesDiv").mouseleave(function () {
+        $("ul#rightListReceptiesUL:first").slideUp(1000);
+
+    });
+});
 
 //});

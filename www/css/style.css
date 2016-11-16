@@ -235,14 +235,15 @@ header {
     -o-transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно в браузере Opera*/
     transition: all .6s ease; /*это значит что ссылки будут менять свой цвет плавно */
 }
-div#rightListArticlesDiv a{color: white;}
+div#rightListArticlesDiv a,
+div#rightListReceptiesDiv a{color: white;}
 
 div#rightListArticlesDiv ul#rightListArticlesUL{
     float: none;
     position: absolute;
     display: none;
     width: 95%;
-    top: 157px;/*125px;*/
+    top: 127px;/*125px;*/
     left: 6px; /*-213px;*/
     color: white;
      border: 1px solid #a52a2a;
@@ -250,27 +251,45 @@ div#rightListArticlesDiv ul#rightListArticlesUL{
     background-color: #deb887;
 
 }
-div#rightListArticlesDiv ul#rightListArticlesUL li{
+div#rightListReceptiesDiv ul#rightListReceptiesUL{
+    float: none;
+    position: absolute;
+    display: none;
+    width: 95%;
+    top: 217px;/*125px;*/
+    left: 6px; /*-213px;*/
+    color: white;
+    border: 1px solid #a52a2a;
+    border-radius: 4px;
+    background-color: #deb887;
+}
+{}
+div#rightListArticlesDiv ul#rightListArticlesUL li,
+div#rightListReceptiesDiv ul#rightListReceptiesUL li{
     position: relative;
     padding: 5px;
     border-bottom: 1px solid #a52a2a;
 
 }
-div#rightListArticlesDiv ul#rightListArticlesUL li:last-child{
+div#rightListArticlesDiv ul#rightListArticlesUL li:last-child,
+div#rightListReceptiesDiv ul#rightListReceptiesUL li:last-child{
     border-bottom: none;
 }
-div#rightListArticlesDiv ul#rightListArticlesUL li a{
+div#rightListArticlesDiv ul#rightListArticlesUL li a,
+div#rightListReceptiesDiv ul#rightListReceptiesUL li a{
     width: 95%;
     height: auto;
     font-size: 0.8em;
     line-height: 1em;
     color: #a52a2a;
 }
-div#rightListArticlesDiv ul#rightListArticlesUL li:hover{
+div#rightListArticlesDiv ul#rightListArticlesUL li:hover,
+div#rightListReceptiesDiv ul#rightListReceptiesUL li:hover{
     background-color: #a52a2a;
     color: #deb887;
 }
-div#rightListArticlesDiv ul#rightListArticlesUL li a:hover{
+div#rightListArticlesDiv ul#rightListArticlesUL li a:hover,
+div#rightListReceptiesDiv ul#rightListReceptiesUL li a:hover{
     color: #deb887;
 }
 

@@ -9,15 +9,12 @@
         <a href="range.php">
             <div class="menuSidebar">Ассортимент</div>
         </a>
-        <a href="recipes.php">
-            <div class="menuSidebar">Рецепты</div>
-        </a>
         <a href="articles.php">
             <div class="menuSidebar" id="rightListArticlesDiv">Статьи
                 <ul id="rightListArticlesUL">
                     <?php
                         global $link;
-                        //$data = array();
+                    require_once "functions/connectDB.php";
                         connectDBTurcoffee();
                         $result = $link->query('SELECT * from myarticles');
                         $row_count = $result->rowCount();
@@ -34,13 +31,6 @@
                     ?>
                 </ul>
            </div>
-            <!--<div class="menuSidebar" id="rightListArticlesDiv">Статьи
-            <ul id="rightListArticlesUL">
-                <li class="liClassMenu" id="liArticle1"><a href="#" class="liClassMenu" id="aArticle1">Приветствую всех посетителей моего сайта "Кофе по-турецки"</a></li>
-                <li class="liClassMenu" id="liArticle2"><a href="#" class="liClassMenu" id="aArticle2">75 кофе-фактов</a></li>
-                <li class="liClassMenu" id="liArticle3"><a href="#" class="liClassMenu" id="aArticle3">5 болезней от которых помогает уберечься ароматный кофе</a></li>
-            </ul>
-            </div>-->
         </a>
                 <div class="clear"></div>
         <a href="shop.php">
@@ -48,6 +38,29 @@
         </a>
         <a href="video.php">
             <div class="menuSidebar">Видео</div>
+        </a>
+        <a href="recipes.php">
+            <div class="menuSidebar" id="rightListReceptiesDiv">Рецепты
+                <ul id="rightListReceptiesUL">
+                    <?php
+                    global $link;
+                    require_once "functions/connectDB.php";
+                    connectDBTurcoffee();
+                    $result = $link->query('SELECT * from myrecipes');
+                    $row_count = $result->rowCount();
+                    $rows = $result->fetchAll();
+                    if ($row_count > 0) {
+                        foreach ($rows as $row) {
+                            $id = $row['id'];
+                            $title = $row['title'];
+                            echo "<li class=\"liClassMenu\" id=\"liRecepties'.$id.'\">
+                                      <a href=\"getRecepties.php?id=".$id."\" class=\"liClassMenu\" id=\"aRecepties'.$id.'\">".$title."</a></li>
+                                      ";
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
         </a>
     </div>
     <div class="clear"></div>
